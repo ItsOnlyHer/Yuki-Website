@@ -1,0 +1,34 @@
+body, html {
+	background-image:url(bkg.png);
+	color:white;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.wrapper {
+  font: 1.2em sans-serif;
+
+  height: 40em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+	border: 2px solid rgb(95 97 110);
+	border-radius: 0.5em;
+	padding: 20px;
+	width: 10em;
+	color:black;
+}
+
+.header {
+  border: 2px solid rgb(95 97 110);
+  border-radius: 0.5em;
+  padding: 20px;
+  width: 10em;
+  color:black;
+}
+
+
