@@ -1,6 +1,6 @@
 body, html {
 	background-image:url(bkg.png);
-	color:white;
+	color:black;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -20,7 +20,7 @@ body, html {
 	border-radius: 0.5em;
 	padding: 20px;
 	width: 10em;
-	color:black;
+	color:white;
 }
 
 .header {
@@ -28,7 +28,7 @@ body, html {
   border-radius: 0.5em;
   padding: 20px;
   width: 10em;
-  color:black;
+  color:white;
 }
 
 
