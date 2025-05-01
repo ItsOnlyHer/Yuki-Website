@@ -1,34 +1,36 @@
- body, html {
-	background-color:black;
-	color:black;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
+body, html {
+  background-color: black;
+  color: white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
 }
 
 .wrapper {
   font: 1.2em sans-serif;
-
-  height: 40em;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 2em;
 }
 
 .box {
-	border: 2px solid rgb(95 97 110);
-	border-radius: 0.5em;
-	padding: 20px;
-	width: 10em;
-	color:white;
+  border: 2px solid rgb(95 97 110);
+  border-radius: 0.5em;
+  padding: 2em;
+  max-width: 500px;
+  color: white;
+  background-color: #1a1a1a;
+  line-height: 1.6;
+  text-align: center;
 }
 
 .header {
-  border: 2px solid rgb(95 97 110);
-  border-radius: 0.5em;
-  padding: 20px;
-  width: 10em;
-  color:white;
+  font-family: 'VT323', monospace;
+  font-size: 1.6em;
+  margin-bottom: 1em;
+  color: #ffffff;
 }
-
-
