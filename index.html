@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!--made by lee and hosted by GitHub Pages-->
 <html>
 <head>
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> <!--redirects users on http to https. might be unecessary-->
@@ -7,21 +6,95 @@
   <link rel="icon" type="image/x-icon" href="favicon.jpg"> <!--sets favicon-->
   <link href="style.css" rel="stylesheet" type="text/css"> <!--sets the page's css file-->
   <link rel="stylesheet" href=""> 
-  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet"> <!--VT323 font. Duh.-->
   <meta name="viewport" content="width=device-width">
 </head>
 <body>
+  
   <div class=wrapper>
 	<div class=box>
 		<div class=header>
-		Everything is under construction!<br>
-		Please... Check out <a href="https://leexyz.online">leexyz.online!</a>
+		Yuki Site <3<br>
+		</div>
+		<div class=main>
+		<br>Introduction example
+		<!--introduce yourself!-->
+
+		<br>Age XX
+		<br>Romantic Orientation XX
+		<br>Sexual Orientation XX
+		<br>Interests: example,<span id="dots">...</span><span id="more">example</span> <!--<span> element defines read more box-->
+      <button onclick="myFunction()" id="myBtn">Read more</button>
+      <script>
+      	      function myFunction() {
+      	var dots = document.getElementById("dots");
+      	var moreText = document.getElementById("more");
+      	var btnText = document.getElementById("myBtn");
+
+      	if (dots.style.display === "none") {
+      	  dots.style.display = "inline";
+      	  btnText.innerHTML = "Read more";
+      	  moreText.style.display = "none";
+      	} else {
+      	  dots.style.display = "none";
+      	  btnText.innerHTML = "Read less";
+      	  moreText.style.display = "inline";
+      	}
+} 
+      	    </script>
 		</div>
 		<div class=links>
+		<a href=https://gnu.org/>Link 1</a> <a href=https://gnu.org/>Link 2</a> <a href=https://gnu.org/>Link 3</a>
 		
 		</div>
+	
 		<div class=status>
 		
+		</div>
+		<div class=music> 
+		<img src="placeholder.jpg" alt="Album Art" id="albumArt" class="album-art">
+		               <div class="song-info">
+		                   <p><strong>Track:</strong> <span id="track">--</span></p>
+		                   <p><strong>Artist:</strong> <span id="artist">--</span></p>
+		                   <p><strong>Album:</strong> <span id="album">--</span></p>
+		                   <p><a href="#" target="_blank" id="trackUrl">Listen on Last.fm</a></p>
+		               </div>
+		     <script>
+		     async function fetchNowPlaying() {
+		                 const user = 'make a last.fm account, link it to your service, put the username here. dont like it? remove the div!'; // Replace with your Last.fm username
+		                 const url = `https://lastfm-last-played.biancarosa.com.br/${user}/latest-song`;
+		     
+		                 try {
+		                     const response = await fetch(url);
+		                     const data = await response.json();
+		     
+		                     const track = data.track.name || 'Unknown';
+		                     const artist = data.track.artist['#text'] || 'Unknown';
+		                     const album = data.track.album['#text'] || 'Unknown';
+		                     const albumArt = data.track.image.find(img => img.size === 'large')['#text'] || 'placeholder.jpg';
+		                     const trackUrl = data.track.url || '#';
+		     
+		                     document.getElementById('track').textContent = track;
+		                     document.getElementById('artist').textContent = artist;
+		                     document.getElementById('album').textContent = album;
+		                     document.getElementById('albumArt').src = albumArt;
+		                     document.getElementById('trackUrl').href = trackUrl;
+		                 } catch (error) {
+		                     console.error('Error fetching now playing data:', error);
+		                     document.getElementById('track').textContent = 'Error fetching data';
+		                 }
+		             }
+		     		setInterval(fetchNowPlaying, 10000);
+		     		fetchNowPlaying();
+		             // Media Control Actions
+		             async function controlMedia(action) {
+		                 await fetch(`/media/${action}`);
+		                 fetchNowPlaying();
+		             }
+		     
+		             // Update Stats and Now Playing Data Periodically
+		             setInterval(fetchNowPlaying, 10000);
+		             fetchNowPlaying();
+		    </script>
 		</div>
 	</div>
 
