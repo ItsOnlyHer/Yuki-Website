@@ -34,7 +34,7 @@
       	  dots.style.display = "inline";
       	  btnText.innerHTML = "Read more";
       	  moreText.style.display = "none";
-      	} else {
+      	} else {file
       	  dots.style.display = "none";
       	  btnText.innerHTML = "Read less";
       	  moreText.style.display = "inline";
@@ -80,7 +80,7 @@
 		                     document.getElementById('trackUrl').href = trackUrl;
 		                 } catch (error) {
 		                     console.error('Error fetching now playing data:', error);
-		                     document.getElementById('track').textContent = 'ERR - Probably didn't sync right...';
+		                     document.getElementById('track').textContent = 'Error';
 		                 }
 		             }
 		     		setInterval(fetchNowPlaying, 10000);
