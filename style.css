@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'DepartureMono';
-  src: url('DepartureMono.otf')
+  src: url('DepartureMono.otf');
 }
 
 body, html {
@@ -12,26 +12,29 @@ body, html {
   background-attachment: fixed;
   margin: 0;
   padding: 0;
-  
 }
-  a {/* these a css thingies set the hyperlinks to not use purple or blue coloring*/
-    color: white;
-    font-style: italic;
-    word-spacing: 80%;
-  }
-  
-  a:visited { /* these a css thingies set the hyperlinks to not use purple or blue coloring*/
-   /* color:white; */
-    font-style: italic; }
-  a:hover {/*this sets the hover color for hyperlinks bc why not?*/
-    color:lightgray;
-  }
-    
-  #more {display: none;}
-  
+
+a { /* hyperlinks style */
+  color: white;
+  font-style: italic;
+  word-spacing: 80%;
+}
+
+a:visited {
+  font-style: italic;
+}
+
+a:hover {
+  color: lightgray;
+}
+
+/* Hide the "more" spans by default */
+#more {
+  display: none;
+}
+
 .wrapper {
   font-family: 'DepartureMono';
- 
   height: 100vh;
   display: flex;
   align-items: center;
@@ -40,13 +43,15 @@ body, html {
   overflow-x: auto;
   white-space: nowrap;
 }
+
 .links {
-	font-size:115%;
-	font-weight:bold;
-	padding: 20px;
+  font-size: 115%;
+  font-weight: bold;
+  padding: 20px;
 }
+
 .box {
-  border: 2px solid rgb(95 97 110);
+  border: 2px solid rgb(95, 97, 110);
   border-radius: 0.5em;
   padding: 2em;
   max-width: 500px;
@@ -62,4 +67,9 @@ body, html {
   font-size: 1.6em;
   margin-bottom: 1em;
   color: #ffffff;
+}
+
+.collapsible .content {
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
 }

@@ -2,10 +2,9 @@
 <html>
 <head>
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> <!--redirects users on http to https. might be unecessary-->
-  <title>Yuki Website <3</title> <!--sets the title of the tab-->
+  <title>Yuki-Site! <3</title> <!--sets the title of the tab-->
   <link rel="icon" type="image/x-icon" href="favicon.jpg"> <!--sets favicon-->
   <link href="style.css" rel="stylesheet" type="text/css"> <!--sets the page's css file-->
-  <link rel="stylesheet" href=""> 
   <meta name="viewport" content="width=device-width">
 </head>
 <body>
@@ -13,16 +12,42 @@
   <div class=wrapper>
 	<div class=box>
 		<div class=header>
-		Yuki Site <3<br>
+		Yuki Site <br>
 		</div>
-		<div class=main>
-		<br>Introduction example
+		<div class=main-bio>
+		<span id="intro-preview">
+		  <br>Hey! I'm Yuki! <3
+		  <br>I'm just a weirdo bastard on the Internet.
+		</span>
+		<span id="intro-more" style="display: none;">
+		  <br>I usually just play games, roleplay on VRChat, 
+		  <br>and just hangout with friends I love.
+		  <br>I'm really terrible at socializing and talking,
+		  <br>so if I'm rude sounding... Sorry?
+		  <br>[ Running Arch Linux 6.12.19-1-lts. ]
+		</span>
+		<br><button onclick="toggleIntro()" id="introBtn">Read more</button>
+
+		<script>
+		  function toggleIntro() {
+		    var preview = document.getElementById("intro-preview");
+		    var more = document.getElementById("intro-more");
+		    var btn = document.getElementById("introBtn");
+		
+		    if (more.style.display === "none") {
+		      more.style.display = "inline";
+		      btn.innerHTML = "Read less";
+		    } else {
+		      more.style.display = "none";
+		      btn.innerHTML = "Read more";
+		    }
+		  }
+		</script>
+		
 		<!--introduce yourself!-->
 
-		<br>Age XX
-		<br>Romantic Orientation XX
-		<br>Sexual Orientation XX
-		<br>Interests: example,<span id="dots">...</span><span id="more">example</span> <!--<span> element defines read more box-->
+		
+		<br>Interests: example<span id="dots">. . .</span><span id="more">example</span> <!--<span> element defines read more box-->
       <button onclick="myFunction()" id="myBtn">Read more</button>
       <script>
       	      function myFunction() {
@@ -43,7 +68,9 @@
       	    </script>
 		</div>
 		<div class=links>
-		<a href=https://gnu.org/>Link 1</a> <a href=https://gnu.org/>Link 2</a> <a href=https://gnu.org/>Link 3</a>
+		<a href=https://github.com/ItsOnlyHer>GitHub</a> 
+		<a href=https://www.roblox.com/users/385666942/profile>Roblox</a> 
+		<a href=https://x.com/Masayuki_MP>Twitter</a>
 		
 		</div>
 	
@@ -51,6 +78,10 @@
 		
 		</div>
 		<div class=music> 
+
+		<br>Currently Listening To...<br>
+		<br>
+		
 		<img src="placeholder.jpg" alt="Album Art" id="albumArt" class="album-art">
 		               <div class="song-info">
 		                   <p><strong>Track:</strong> <span id="track">--</span></p>
@@ -90,10 +121,7 @@
 		                 await fetch(`/media/${action}`);
 		                 fetchNowPlaying();
 		             }
-		     
-		             // Update Stats and Now Playing Data Periodically
-		             setInterval(fetchNowPlaying, 10000);
-		             fetchNowPlaying();
+		             
 		    </script>
 		</div>
 	</div>
