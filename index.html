@@ -12,11 +12,11 @@
   <div class=wrapper>
 	<div class=box>
 		<div class=header>
-		Yuki Site <br>
+		Yuki Site 
 		</div>
 		<div class=main-bio>
 		<span id="intro-preview">
-		  <br>Hey! I'm Yuki! <3
+		  Hey! I'm Yuki! 
 		  <br>I'm just a weirdo bastard on the Internet.
 		</span>
 		<span id="intro-more" style="display: none;">
@@ -24,7 +24,7 @@
 		  <br>and just hangout with friends I love.
 		  <br>I'm really terrible at socializing and talking,
 		  <br>so if I'm rude sounding... Sorry?
-		  <br>[ Running Arch Linux 6.12.19-1-lts. ]
+		  <br>[ 󱀝 Running Arch Linux 6.12.19-1-lts. 󱀝 ]
 		</span>
 		<br><button onclick="toggleIntro()" id="introBtn">Read more</button>
 
@@ -43,34 +43,39 @@
 		    }
 		  }
 		</script>
-		
-		<!--introduce yourself!-->
-
-		
-		<br>Interests: example<span id="dots">. . .</span><span id="more">example</span> <!--<span> element defines read more box-->
-      <button onclick="myFunction()" id="myBtn">Read more</button>
-      <script>
-      	      function myFunction() {
-      	var dots = document.getElementById("dots");
-      	var moreText = document.getElementById("more");
-      	var btnText = document.getElementById("myBtn");
-
-      	if (dots.style.display === "none") {
-      	  dots.style.display = "inline";
-      	  btnText.innerHTML = "Read more";
-      	  moreText.style.display = "none";
-      	} else {file
-      	  dots.style.display = "none";
-      	  btnText.innerHTML = "Read less";
-      	  moreText.style.display = "inline";
-      	}
-} 
-      	    </script>
+      	<p>Interests: Hanging out<span id="dots">...</span>
+      	              <span id="more" style="display: none;">
+      	                  <br>Playing games
+      	                  <br>Roleplaying
+      	                  <br>Interstellar Internet Exploration
+      	                  <br>General fuckery.
+      	              </span>
+      	          </p>
+      	          <button onclick="myFunction()" id="myBtn">Read more</button>
+      	          
+      	          <script>
+      	          function myFunction() {
+      	            var dots = document.getElementById("dots");
+      	            var moreText = document.getElementById("more");
+      	            var btnText = document.getElementById("myBtn");
+      	          
+      	            if (dots.style.display === "none") {
+      	              dots.style.display = "inline";
+      	              btnText.innerHTML = "Read more";
+      	              moreText.style.display = "none";
+      	            } else {
+      	              dots.style.display = "none";
+      	              btnText.innerHTML = "Read less";
+      	              moreText.style.display = "inline";
+      	            }
+      	          }
+      	          </script>
 		</div>
 		<div class=links>
 		<a href=https://github.com/ItsOnlyHer>GitHub</a> 
 		<a href=https://www.roblox.com/users/385666942/profile>Roblox</a> 
 		<a href=https://x.com/Masayuki_MP>Twitter</a>
+		<a href=https://leexyz.online>Leesite</a>
 		
 		</div>
 	
@@ -123,6 +128,12 @@
 		             }
 		             
 		    </script>
+		    <div class=version>
+		    <footer>
+		    Yuki-Site v0.5b
+		    <br>Might update this later...
+		    </footer>
+		    </div>
 		</div>
 	</div>
 

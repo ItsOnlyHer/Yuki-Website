@@ -73,3 +73,7 @@ a:hover {
   overflow: hidden;
   transition: max-height 0.5s ease-out;
 }
+
+.version {
+	font-size: 65%;
+}
